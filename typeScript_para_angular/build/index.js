@@ -1,7 +1,8 @@
-function printObject(pessoa) {
+"use strict";
+function printObjects(pessoa) {
     console.log(pessoa);
 }
-printObject({
+printObjects({
     name: "Bruce Wayne",
     vulgo: "Batman"
 });
