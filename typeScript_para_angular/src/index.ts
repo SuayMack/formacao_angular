@@ -46,9 +46,12 @@ let meuProduto: ProdutoLoja = {
   unidades: 5
 };
 
-/**** arrays ****/
+//arrays
 let dados: string[] = ["Priscila", "Wagner", "Davi", "Nick"];
 let dados2: Array<string> = ["Priscila", "Wagner", "Davi", "Nick"];
 
-/**** arrays multi Types ****/
+// arrays multi Types
 let infos: (string | number)[] = ["Priscila", 43, "Wagner"];
+
+// Tuplas **Tem que respeitar a ordem das informações
+let boleto:[string, number, number] = ["agua", 215.20, 6765446]
