@@ -88,47 +88,75 @@
 //   return "Priscila";
 // }
 
-//interfaces (type x interface)
-type robot = {
-  id: number;
-  name: string;
-};
+// //interfaces (type x interface)
+// type robot = {
+//   id: number;
+//   name: string;
+// };
 
-const bot: robot = {
-  id: 1,
-  name: "megaman",
-}
+// const bot: robot = {
+//   id: 1,
+//   name: "megaman",
+// }
 
-interface robot2 {
-  id: number | string;
-  name: string;
-  sayHello(): string;
-}
+// interface robot2 {
+//   id: number | string;
+//   name: string;
+//   sayHello(): string;
+// }
 
-const bot2: robot2 = {
-  id: 2,
-  name: "sonyc",
-  sayHello(): string {
-    return `hello i'm ${this.name}`;
+// const bot2: robot2 = {
+//   id: 2,
+//   name: "sonyc",
+//   sayHello(): string {
+//     return `hello i'm ${this.name}`;
+//   }
+// }
+
+// console.log(bot);
+// console.log(bot2);
+
+// //Quando usar interface
+// class Pessoa implements robot2 {
+//   id: string | number;
+//   name: string;
+
+//   constructor(id: string | number, name: string){
+//     this.id = id
+//     this.name = name
+//   }
+//   sayHello(): string {
+//     return `hello i'm ${this.name}`;
+//   }
+// }
+
+// const p = new Pessoa(1, "superman");
+// console.log(p.sayHello());
+
+// *** Classes *** //
+/*
+data modifiers
+public
+private
+protected
+*/
+
+class Character {
+  private name?: string;
+  stregth: number;
+  skill: number;
+
+  constructor(name: string, stregth: number, skill: number) {
+    this.name = name;
+    this.stregth = stregth;
+    this.skill = skill;
+  };
+
+  attack(): void {
+    console.log(`Attac with ${this.stregth} points`);
   }
 }
 
-console.log(bot);
-console.log(bot2);
+const p1 = new Character("Riu", 10, 98);
 
-//Quando usar interface
-class Pessoa implements robot2 {
-  id: string | number;
-  name: string;
-
-  constructor(id: string | number, name: string){
-    this.id = id
-    this.name = name
-  }
-  sayHello(): string {
-    return `hello i'm ${this.name}`;
-  }
-}
-
-const p = new Pessoa(1, "superman");
-console.log(p.sayHello());
+p1.attack();
