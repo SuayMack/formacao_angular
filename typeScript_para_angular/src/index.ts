@@ -60,30 +60,54 @@
 // let aniversario: Date = new Date("2023-08-11 03:50");
 // console.log(aniversario.toString());
 
-// *** FUNÇÔES *** //
+// // *** FUNÇÔES *** //
 
-function addNumber(x: number, y: number): number {
-  return x + y;
+// function addNumber(x: number, y: number): number {
+//   return x + y;
+// }
+
+// let soma: number = addNumber(4, 7);
+// console.log(soma);
+
+
+// function addHello(name: string): string {
+//   return `Hello ${name}`;
+// }
+
+// console.log(addHello("Priscila"));
+
+// //tipo funções Multi Tipos
+// function CallPhone(phone: number | string): number| string {
+//   return phone;
+// }
+
+// console.log(CallPhone("9 9618767"));
+
+// //tipo funções async
+// async function getDatabase(id:number) : Promise<string>{
+//   return "Priscila";
+// }
+
+//interfaces (type x interface)
+type robot = {
+  id: number;
+  name: string;
+};
+
+const bot: robot = {
+  id: 1,
+  name: "megaman",
 }
 
-let soma: number = addNumber(4, 7);
-console.log(soma);
-
-
-function addHello(name: string): string {
-  return `Hello ${name}`;
+interface robot2 {
+  id: number | string;
+  name: string;
 }
 
-console.log(addHello("Priscila"));
-
-//tipo funções Multi Tipos
-function CallPhone(phone: number | string): number| string {
-  return phone;
+const bot2: robot2 = {
+  id: 2,
+  name: "sonyc",
 }
 
-console.log(CallPhone("9 9618767"));
-
-//tipo funções async
-async function getDatabase(id:number) : Promise<string>{
-  return "Priscila";
-}
+console.log(bot);
+console.log(bot2);
