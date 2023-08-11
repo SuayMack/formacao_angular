@@ -54,4 +54,8 @@ let dados2: Array<string> = ["Priscila", "Wagner", "Davi", "Nick"];
 let infos: (string | number)[] = ["Priscila", 43, "Wagner"];
 
 // Tuplas **Tem que respeitar a ordem das informações
-let boleto:[string, number, number] = ["agua", 215.20, 6765446]
+let boleto:[string, number, number] = ["agua", 215.20, 6765446];
+
+//datas
+let aniversario: Date = new Date("2023-08-11 03:50");
+console.log(aniversario.toString());
