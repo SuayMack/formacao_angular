@@ -102,12 +102,33 @@ const bot: robot = {
 interface robot2 {
   id: number | string;
   name: string;
+  sayHello(): string;
 }
 
 const bot2: robot2 = {
   id: 2,
   name: "sonyc",
+  sayHello(): string {
+    return `hello i'm ${this.name}`;
+  }
 }
 
 console.log(bot);
 console.log(bot2);
+
+//Quando usar interface
+class Pessoa implements robot2 {
+  id: string | number;
+  name: string;
+
+  constructor(id: string | number, name: string){
+    this.id = id
+    this.name = name
+  }
+  sayHello(): string {
+    return `hello i'm ${this.name}`;
+  }
+}
+
+const p = new Pessoa(1, "superman");
+console.log(p.sayHello());
