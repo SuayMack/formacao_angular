@@ -82,3 +82,8 @@ function CallPhone(phone: number | string): number| string {
 }
 
 console.log(CallPhone("9 9618767"));
+
+//tipo funções async
+async function getDatabase(id:number) : Promise<string>{
+  return "Priscila";
+}
